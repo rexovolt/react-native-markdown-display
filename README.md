@@ -24,7 +24,7 @@ npm install -S @ronradtke/react-native-markdown-display
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
-import Markdownfrom '@ronradtke/react-native-markdown-display';
+import Markdown from '@ronradtke/react-native-markdown-display';
 
 const copy = `# h1 Heading 8-)
 
@@ -847,7 +847,7 @@ Think of the implementation like applying styles in CSS. changes to the `body` e
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
-import Markdownfrom '@ronradtke/react-native-markdown-display';
+import Markdown from '@ronradtke/react-native-markdown-display';
 
 const copy = `
 This is some text which is red because of the body style, which is also really small!
@@ -910,7 +910,7 @@ Styles are used to override how certain rules are styled. The existing implement
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet } from 'react-native';
 
-import Markdownfrom '@ronradtke/react-native-markdown-display';
+import Markdown from '@ronradtke/react-native-markdown-display';
 
 const styles = StyleSheet.create({
   heading1: {
@@ -984,7 +984,7 @@ Rules are used to specify how you want certain elements to be displayed. The exi
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native';
 
-import Markdownfrom '@ronradtke/react-native-markdown-display';
+import Markdown from '@ronradtke/react-native-markdown-display';
 
 const rules = {
     heading1: (node, children, parent, styles) =>
@@ -1093,7 +1093,7 @@ It is possible to overwrite this behaviour in one of two ways:
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
-import Markdownfrom '@ronradtke/react-native-markdown-display';
+import Markdown from '@ronradtke/react-native-markdown-display';
 
 const copy = `[This is a link!](https://github.com/iamacup/react-native-markdown-display/)`;
 
@@ -1145,7 +1145,7 @@ Something like this with `yourCustomHandlerFunctionOrLogicHere`:
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native';
 
-import Markdownfrom '@ronradtke/react-native-markdown-display';
+import Markdown from '@ronradtke/react-native-markdown-display';
 
 const copy = `[This is a link!](https://github.com/iamacup/react-native-markdown-display/)`;
 

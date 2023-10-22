@@ -92,7 +92,7 @@ export const styles = {
     borderRadius: 4,
     ...Platform.select({
       ['ios']: {
-        fontFamily: 'Courier',
+        fontFamily: 'Courier New',
       },
       ['android']: {
         fontFamily: 'monospace',
@@ -107,7 +107,7 @@ export const styles = {
     borderRadius: 4,
     ...Platform.select({
       ['ios']: {
-        fontFamily: 'Courier',
+        fontFamily: 'Courier New',
       },
       ['android']: {
         fontFamily: 'monospace',
@@ -122,7 +122,7 @@ export const styles = {
     borderRadius: 4,
     ...Platform.select({
       ['ios']: {
-        fontFamily: 'Courier',
+        fontFamily: 'Courier New',
       },
       ['android']: {
         fontFamily: 'monospace',

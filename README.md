@@ -1,4 +1,4 @@
-# React Native Markdown Display [![npm version](https://badge.fury.io/js/react-native-markdown-display.svg)](https://badge.fury.io/js/react-native-markdown-display) [![Known Vulnerabilities](https://snyk.io/test/github/iamacup/react-native-markdown-display/badge.svg)](https://snyk.io/test/github/iamacup/react-native-markdown-display)
+# React Native Markdown Display [![npm version](https://badge.fury.io/js/@ronradtke%2Freact-native-markdown-display.svg)](https://badge.fury.io/js/@ronradtke%2Freact-native-markdown-display) [![Known Vulnerabilities](https://snyk.io/test/github/iamacup/react-native-markdown-display/badge.svg)](https://snyk.io/test/github/iamacup/react-native-markdown-display)
 
 It a 100% compatible CommonMark renderer, a react-native markdown renderer done right. This is __not__ a web-view markdown renderer but a renderer that uses native components for all its elements. These components can be overwritten and styled as needed.
 
@@ -10,12 +10,12 @@ This is intended to be a replacement for react-native-markdown-renderer, with a 
 
 #### Yarn
 ```npm
-yarn add react-native-markdown-display
+yarn add @ronradtke/react-native-markdown-display
 ```
 
 #### NPM
 ```npm
-npm install -S react-native-markdown-display
+npm install -S @ronradtke/react-native-markdown-display
 ```
 
 ### Get Started
@@ -24,7 +24,7 @@ npm install -S react-native-markdown-display
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
-import Markdownfrom '@ronradtke/react-native-markdown-display';
+import Markdown from '@ronradtke/react-native-markdown-display';
 
 const copy = `# h1 Heading 8-)
 
@@ -847,7 +847,7 @@ Think of the implementation like applying styles in CSS. changes to the `body` e
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
-import Markdownfrom '@ronradtke/react-native-markdown-display';
+import Markdown from '@ronradtke/react-native-markdown-display';
 
 const copy = `
 This is some text which is red because of the body style, which is also really small!
@@ -910,7 +910,7 @@ Styles are used to override how certain rules are styled. The existing implement
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet } from 'react-native';
 
-import Markdownfrom '@ronradtke/react-native-markdown-display';
+import Markdown from '@ronradtke/react-native-markdown-display';
 
 const styles = StyleSheet.create({
   heading1: {
@@ -984,7 +984,7 @@ Rules are used to specify how you want certain elements to be displayed. The exi
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native';
 
-import Markdownfrom '@ronradtke/react-native-markdown-display';
+import Markdown from '@ronradtke/react-native-markdown-display';
 
 const rules = {
     heading1: (node, children, parent, styles) =>
@@ -1093,7 +1093,7 @@ It is possible to overwrite this behaviour in one of two ways:
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
-import Markdownfrom '@ronradtke/react-native-markdown-display';
+import Markdown from '@ronradtke/react-native-markdown-display';
 
 const copy = `[This is a link!](https://github.com/iamacup/react-native-markdown-display/)`;
 
@@ -1145,7 +1145,7 @@ Something like this with `yourCustomHandlerFunctionOrLogicHere`:
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native';
 
-import Markdownfrom '@ronradtke/react-native-markdown-display';
+import Markdown from '@ronradtke/react-native-markdown-display';
 
 const copy = `[This is a link!](https://github.com/iamacup/react-native-markdown-display/)`;
 

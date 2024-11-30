@@ -1026,7 +1026,7 @@ const onLinkPress = (url) => {
       return false;
     }
     
-    // return true to open with `Linking.openURL
+    // return true to open with `Linking.openURL`
     // return false to handle it yourself
     return true
   }

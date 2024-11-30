@@ -31,7 +31,7 @@
   "dependencies": {
     "css-to-react-native": "^3.2.0",
     "eslint-plugin-jest": "^28.9.0",
-    "markdown-it": "^14.1.0"
+    "markdown-it": "patch:markdown-it@npm%3A14.1.0#~/.yarn/patches/markdown-it-npm-14.1.0-e337d75bfe.patch"
   },
   "peerDependencies": {
     "react": ">=16.2.0",

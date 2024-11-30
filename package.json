@@ -30,9 +30,7 @@
   "homepage": "https://github.com/rexovolt/react-native-markdown-display",
   "dependencies": {
     "css-to-react-native": "^3.2.0",
-    "markdown-it": "^13.0.1",
-    "prop-types": "^15.7.2",
-    "react-native-fit-image": "^1.5.5"
+    "markdown-it": "^13.0.1"
   },
   "peerDependencies": {
     "react": ">=16.2.0",

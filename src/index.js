@@ -5,7 +5,6 @@
 
 import React, {useMemo} from 'react';
 import {StyleSheet, Text} from 'react-native';
-import PropTypes from 'prop-types';
 import parser from './lib/parser';
 import getUniqueID from './lib/util/getUniqueID';
 import hasParents from './lib/util/hasParents';
@@ -17,7 +16,6 @@ import MarkdownIt from 'markdown-it';
 import removeTextStyleProps from './lib/util/removeTextStyleProps';
 import {styles} from './lib/styles';
 import {stringToTokens} from './lib/util/stringToTokens';
-import FitImage from 'react-native-fit-image';
 import textStyleProps from './lib/data/textStyleProps';
 
 export {
@@ -32,7 +30,6 @@ export {
   MarkdownIt,
   styles,
   removeTextStyleProps,
-  FitImage,
   textStyleProps,
 };
 
@@ -139,7 +136,7 @@ const Markdown = React.memo(
     style = null,
     mergeStyle = true,
     markdownit = MarkdownIt({
-      typographer: true,
+      typographer: false,
     }),
     onLinkPress,
     maxTopLevelChildren = null,
@@ -191,48 +188,5 @@ const Markdown = React.memo(
 );
 
 Markdown.displayName = 'Markdown';
-
-Markdown.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.array]).isRequired,
-  textcomponent: PropTypes.elementType,
-  renderer: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.instanceOf(AstRenderer),
-  ]),
-  onLinkPress: PropTypes.func,
-  maxTopLevelChildren: PropTypes.number,
-  topLevelMaxExceededItem: PropTypes.any,
-  rules: (props, propName, componentName) => {
-    let invalidProps = [];
-    const prop = props[propName];
-
-    if (!prop) {
-      return;
-    }
-
-    if (typeof prop === 'object') {
-      invalidProps = Object.keys(prop).filter(
-        (key) => typeof prop[key] !== 'function',
-      );
-    }
-
-    if (typeof prop !== 'object') {
-      return new Error(
-        `Invalid prop \`${propName}\` supplied to \`${componentName}\`. Must be of shape {[index:string]:function} `,
-      );
-    } else if (invalidProps.length > 0) {
-      return new Error(
-        `Invalid prop \`${propName}\` supplied to \`${componentName}\`. These ` +
-          `props are not of type function \`${invalidProps.join(', ')}\` `,
-      );
-    }
-  },
-  markdownit: PropTypes.instanceOf(MarkdownIt),
-  style: PropTypes.any,
-  mergeStyle: PropTypes.bool,
-  allowedImageHandlers: PropTypes.arrayOf(PropTypes.string),
-  defaultImageHandler: PropTypes.string,
-  debugPrintTree: PropTypes.bool,
-};
 
 export default Markdown;

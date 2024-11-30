@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Pressable, View, Platform, StyleSheet} from 'react-native';
-import FitImage from 'react-native-fit-image';
 
 import openUrl from './util/openUrl';
 import hasParents from './util/hasParents';
@@ -252,43 +251,6 @@ const renderRules = (Text) => ({
       <View style={styles.image}>{children}</View>
     </Pressable>
   ),
-  // Images
-  image: (
-    node,
-    children,
-    parent,
-    styles,
-    allowedImageHandlers,
-    defaultImageHandler,
-  ) => {
-    const {src, alt} = node.attributes;
-
-    // we check that the source starts with at least one of the elements in allowedImageHandlers
-    const show =
-      allowedImageHandlers.filter((value) => {
-        return src.toLowerCase().startsWith(value.toLowerCase());
-      }).length > 0;
-
-    if (show === false && defaultImageHandler === null) {
-      return null;
-    }
-
-    const imageProps = {
-      indicator: true,
-      key: node.key,
-      style: styles._VIEW_SAFE_image,
-      source: {
-        uri: show === true ? src : `${defaultImageHandler}${src}`,
-      },
-    };
-
-    if (alt) {
-      imageProps.accessible = true;
-      imageProps.accessibilityLabel = alt;
-    }
-
-    return <FitImage {...imageProps} />;
-  },
 
   // Text Output
   text: (node, children, parent, styles, inheritedStyles = {}) => (

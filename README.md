@@ -1,21 +1,19 @@
-# React Native Markdown Display [![npm version](https://badge.fury.io/js/@ronradtke%2Freact-native-markdown-display.svg)](https://badge.fury.io/js/@ronradtke%2Freact-native-markdown-display) [![Known Vulnerabilities](https://snyk.io/test/github/iamacup/react-native-markdown-display/badge.svg)](https://snyk.io/test/github/iamacup/react-native-markdown-display)
+# @rexovolt/react-native-markdown-display [![npm version](https://badge.fury.io/js/@rexovolt%2Freact-native-markdown-display.svg)](https://badge.fury.io/js/@rexovolt%2Freact-native-markdown-display) [![Known Vulnerabilities](https://snyk.io/test/github/iamacup/react-native-markdown-display/badge.svg)](https://snyk.io/test/github/iamacup/react-native-markdown-display)
 
-It a 100% compatible CommonMark renderer, a react-native markdown renderer done right. This is __not__ a web-view markdown renderer but a renderer that uses native components for all its elements. These components can be overwritten and styled as needed.
+It is a React Native markdown renderer done right. This is __not__ a web-view markdown renderer but a renderer that uses native components for all its elements. These components can be overwritten and styled as needed.
 
-### Compatibility with react-native-markdown-renderer
-
-This is intended to be a replacement for react-native-markdown-renderer, with a variety of bug fixes and enhancements - **Due to how the new style rules work, there may be some tweaking needed**, [see how to style stuff section below](#How-to-style-stuff)
+NOTE: this fork is for use by [RVMob](https://github.com/revoltchat/rvmob) and is more focused on Revolt/Upryzing's version of markdown than on CommonMark - **incompatibilities are certain!**
 
 ### Install
 
 #### Yarn
 ```npm
-yarn add @ronradtke/react-native-markdown-display
+yarn add @rexovolt/react-native-markdown-display
 ```
 
 #### NPM
 ```npm
-npm install -S @ronradtke/react-native-markdown-display
+npm install -S @rexovolt/react-native-markdown-display
 ```
 
 ### Get Started
@@ -24,13 +22,13 @@ npm install -S @ronradtke/react-native-markdown-display
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
-import Markdown from '@ronradtke/react-native-markdown-display';
+import Markdown from '@rexovolt/react-native-markdown-display';
 
-const copy = `# h1 Heading 8-)
+const copy = `# h1 heading :3
 
 **This is some bold text!**
 
-This is normal text
+This is normal text.
 `;
 
 const App: () => React$Node = () => {
@@ -64,11 +62,11 @@ import { useTheme } from "@react-navigation/native";
 
 import Markdown from "react-native-markdown-display";
 
-const copy = `# h1 Heading 8-)
+const copy = `# h1 heading :3
 
 **This is some bold text!**
 
-This is normal text
+This is normal text.
 `;
 
 const MarkdownWrapper: React.FC<any> = ({ children }) => {
@@ -118,11 +116,11 @@ import { useTheme } from "@react-navigation/native";
 
 import Markdown from "react-native-markdown-display";
 
-const copy = `# h1 Heading 8-)
+const copy = `# h1 heading :3
 
 **This is some bold text!**
 
-This is normal text
+This is normal text.
 `;
 
 const MarkdownWrapper: React.FC<any> = ({ children }) => {
@@ -203,12 +201,12 @@ And some additional, less used options:
 <p>
 
 ```
-  # h1 Heading 8-)
-  ## h2 Heading
-  ### h3 Heading
-  #### h4 Heading
-  ##### h5 Heading
-  ###### h6 Heading
+  # h1 heading :3
+  ## h2 heading
+  ### h3 heading
+  #### h4 heading
+  ##### h5 heading
+  ###### h6 heading
 ```
 
 | iOS | Android
@@ -400,53 +398,6 @@ And some additional, less used options:
 </p>
 </details>
 
-<details><summary>Images</summary>
-<p>
-
-```
-  ![Minion](https://octodex.github.com/images/minion.png)
-  ![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-
-  Like links, Images also have a footnote style syntax
-
-  ![Alt text][id]
-
-  With a reference later in the document defining the URL location:
-
-  [id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
-```
-
-| iOS | Android
-| --- | ---
-| <img src="https://github.com/iamacup/react-native-markdown-display/raw/master/doc/images/ios-10.png"/>  | <img src="https://github.com/iamacup/react-native-markdown-display/raw/master/doc/images/android-10.png"/>  
-
-</p>
-</details>
-
-
-<details><summary>Typographic Replacements</summary>
-<p>
-
-```
-  Enable typographer option to see result.
-
-  (c) (C) (r) (R) (tm) (TM) (p) (P) +-
-
-  test.. test... test..... test?..... test!....
-
-  !!!!!! ???? ,,  -- ---
-
-  "Smartypants, double quotes" and 'single quotes'
-```
-
-| iOS | Android
-| --- | ---
-| <img src="https://github.com/iamacup/react-native-markdown-display/raw/master/doc/images/ios-3.png"/>  | <img src="https://github.com/iamacup/react-native-markdown-display/raw/master/doc/images/android-3.png"/>  
-
-</p>
-</details>
-
-
 <details><summary>Plugins and Extensions</summary>
 <p>
 
@@ -462,7 +413,7 @@ Identify the new components and integrate the plugin with a rendered component. 
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
-import Markdown, { MarkdownIt }from '@ronradtke/react-native-markdown-display';
+import Markdown, { MarkdownIt }from '@rexovolt/react-native-markdown-display';
 import blockEmbedPlugin from 'markdown-it-block-embed';
 
 const markdownItInstance = 
@@ -528,7 +479,7 @@ We need to create the **render rules** and **styles** to handle this new **'vide
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
-import Markdown, { MarkdownIt }from '@ronradtke/react-native-markdown-display';
+import Markdown, { MarkdownIt }from '@rexovolt/react-native-markdown-display';
 import blockEmbedPlugin from 'markdown-it-block-embed';
 
 const markdownItInstance = 
@@ -615,7 +566,7 @@ And all of the video properties needed to render something meaningful are on the
 You can do some additional debugging of what the markdown instance is spitting out like this:
 
 ```jsx
-import Markdown, { MarkdownIt }from '@ronradtke/react-native-markdown-display';
+import Markdown, { MarkdownIt }from '@rexovolt/react-native-markdown-display';
 import blockEmbedPlugin from 'markdown-it-block-embed';
 
 const markdownItInstance = 
@@ -676,12 +627,12 @@ This is all of the markdown in one place for testing that your applied styles wo
 ```
 Headings
 
-  # h1 Heading 8-)
-  ## h2 Heading
-  ### h3 Heading
-  #### h4 Heading
-  ##### h5 Heading
-  ###### h6 Heading
+  # h1 heading :3
+  ## h2 heading
+  ### h3 heading
+  #### h4 heading
+  ##### h5 heading
+  ###### h6 heading
 
 
 Horizontal Rules
@@ -793,34 +744,6 @@ Links
   [link with title](https://www.google.com "title text!")
 
   Autoconverted link https://www.google.com (enable linkify to see)
-
-
-Images
-
-  ![Minion](https://octodex.github.com/images/minion.png)
-  ![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-
-  Like links, Images also have a footnote style syntax
-
-  ![Alt text][id]
-
-  With a reference later in the document defining the URL location:
-
-  [id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
-
-
-Typographic Replacements
-
-  Enable typographer option to see result.
-
-  (c) (C) (r) (R) (tm) (TM) (p) (P) +-
-
-  test.. test... test..... test?..... test!....
-
-  !!!!!! ???? ,,  -- ---
-
-  "Smartypants, double quotes" and 'single quotes'
-
 ```
 
 </p>
@@ -847,7 +770,7 @@ Think of the implementation like applying styles in CSS. changes to the `body` e
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
-import Markdown from '@ronradtke/react-native-markdown-display';
+import Markdown from '@rexovolt/react-native-markdown-display';
 
 const copy = `
 This is some text which is red because of the body style, which is also really small!
@@ -910,7 +833,7 @@ Styles are used to override how certain rules are styled. The existing implement
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet } from 'react-native';
 
-import Markdown from '@ronradtke/react-native-markdown-display';
+import Markdown from '@rexovolt/react-native-markdown-display';
 
 const styles = StyleSheet.create({
   heading1: {
@@ -936,9 +859,9 @@ const styles = StyleSheet.create({
 });
 
 const copy = `
-# h1 Heading 8-)
-## h2 Heading 8-)
-### h3 Heading 8-)
+# h1 heading :3
+## h2 heading :3
+### h3 heading :3
 
 | Option | Description |
 | ------ | ----------- |
@@ -984,7 +907,7 @@ Rules are used to specify how you want certain elements to be displayed. The exi
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native';
 
-import Markdown from '@ronradtke/react-native-markdown-display';
+import Markdown from '@rexovolt/react-native-markdown-display';
 
 const rules = {
     heading1: (node, children, parent, styles) =>
@@ -1002,9 +925,9 @@ const rules = {
 };
 
 const copy = `
-# h1 Heading 8-)
-## h2 Heading 8-)
-### h3 Heading 8-)
+# h1 heading :3
+## h2 heading :3
+### h3 heading :3
 
 | Option | Description |
 | ------ | ----------- |
@@ -1093,7 +1016,7 @@ It is possible to overwrite this behaviour in one of two ways:
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
-import Markdown from '@ronradtke/react-native-markdown-display';
+import Markdown from '@rexovolt/react-native-markdown-display';
 
 const copy = `[This is a link!](https://github.com/iamacup/react-native-markdown-display/)`;
 
@@ -1145,7 +1068,7 @@ Something like this with `yourCustomHandlerFunctionOrLogicHere`:
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native';
 
-import Markdown from '@ronradtke/react-native-markdown-display';
+import Markdown from '@rexovolt/react-native-markdown-display';
 
 const copy = `[This is a link!](https://github.com/iamacup/react-native-markdown-display/)`;
 
@@ -1196,7 +1119,7 @@ This example will stop images and links.
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native';
 
-import Markdown, { MarkdownIt }from '@ronradtke/react-native-markdown-display';
+import Markdown, { MarkdownIt }from '@rexovolt/react-native-markdown-display';
 
 const copy = `
 # This heading will show with formatting
@@ -1240,7 +1163,7 @@ It is possible to need to pre-process the data outside of this library ([related
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, Text } from 'react-native';
 
-import Markdown, { MarkdownIt, tokensToAST, stringToTokens }from '@ronradtke/react-native-markdown-display';
+import Markdown, { MarkdownIt, tokensToAST, stringToTokens }from '@rexovolt/react-native-markdown-display';
 
 const markdownItInstance = MarkdownIt({typographer: true});
 
@@ -1273,8 +1196,3 @@ const App: () => React$Node = () => {
 
 export default App;
 ```
-
-
-### Other Notes
-
-This is a fork of [react-native-markdown-renderer](https://github.com/mientjan/react-native-markdown-renderer), a library that unfortunately has not been updated for some time so i took all of the outstanding pull requests from that library and tested + merged as necessary.

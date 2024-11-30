@@ -1,7 +1,7 @@
 {
-  "name": "@ronradtke/react-native-markdown-display",
+  "name": "@rexovolt/react-native-markdown-display",
   "version": "8.0.0",
-  "description": "Markdown renderer for react-native, with CommonMark spec support + adds syntax extensions & sugar (URL autolinking, typographer), originally created by Mient-jan Stelling as react-native-markdown-renderer",
+  "description": "Markdown renderer for React Native. Forked from @ronr=adtke/react-native-markdown-display for use by RVMob",
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RonRadtke/react-native-markdown-display.git"
+    "url": "git+https://github.com/rexovolt/react-native-markdown-display.git"
   },
   "keywords": [
     "react",
@@ -22,12 +22,12 @@
     "commonmark",
     "markdown-it"
   ],
-  "author": "Michael Lohmann, Daniel Maslowski, Ron Radtke and maintainers of the original library",
+  "author": "Sophie L, Michael Lohmann, Daniel Maslowski, Ron Radtke and maintainers of the original library",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RonRadtke/react-native-markdown-display/issues"
+    "url": "https://github.com/rexovolt/react-native-markdown-display/issues"
   },
-  "homepage": "https://github.com/RonRadtke/react-native-markdown-display",
+  "homepage": "https://github.com/rexovolt/react-native-markdown-display",
   "dependencies": {
     "css-to-react-native": "^3.2.0",
     "markdown-it": "^13.0.1",

@@ -1,5 +1,2 @@
-/example
-/.idea
-/bin
-/docs
-/doc
+*
+!src/**/*

@@ -1,6 +1,6 @@
 {
   "name": "@rexovolt/react-native-markdown-display",
-  "version": "9.0.2",
+  "version": "9.0.3",
   "description": "Markdown renderer for React Native. Forked from @ronr=adtke/react-native-markdown-display for use by RVMob",
   "main": "src/index.js",
   "types": "src/index.d.ts",

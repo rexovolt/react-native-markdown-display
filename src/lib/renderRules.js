@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Pressable, View, Platform, StyleSheet} from 'react-native';
 
 import openUrl from './util/openUrl';
@@ -233,13 +233,14 @@ const renderRules = (Text) => ({
   ),
   // Links
   link: (node, children, parent, styles, onLinkPress) => (
-    <Pressable
+    <Text
       accessibilityRole={'link'}
+      style={styles.link}
       key={node.key}
       onPress={() => openUrl(node.attributes.href, onLinkPress)}
     >
-      <Text style={styles.link}>{children}</Text>
-    </Pressable>
+      {children}
+    </Text>
   ),
   blocklink: (node, children, parent, styles, onLinkPress) => (
     <Pressable

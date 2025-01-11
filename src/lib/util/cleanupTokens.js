@@ -1,6 +1,5 @@
 import getTokenTypeByToken from './getTokenTypeByToken';
 import flattenInlineTokens from './flattenInlineTokens';
-import renderInlineAsText from './renderInlineAsText';
 
 export function cleanupTokens(tokens) {
   tokens = flattenInlineTokens(tokens);

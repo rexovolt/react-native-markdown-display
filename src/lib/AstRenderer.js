@@ -17,8 +17,6 @@ export default class AstRenderer {
     onLinkPress,
     maxTopLevelChildren,
     topLevelMaxExceededItem,
-    allowedImageHandlers,
-    defaultImageHandler,
     debugPrintTree,
   ) {
     this._renderRules = renderRules;
@@ -26,8 +24,6 @@ export default class AstRenderer {
     this._onLinkPress = onLinkPress;
     this._maxTopLevelChildren = maxTopLevelChildren;
     this._topLevelMaxExceededItem = topLevelMaxExceededItem;
-    this._allowedImageHandlers = allowedImageHandlers;
-    this._defaultImageHandler = defaultImageHandler;
     this._debugPrintTree = debugPrintTree;
   }
 
@@ -78,24 +74,13 @@ export default class AstRenderer {
 
     // render any special types of nodes that have different renderRule function signatures
 
-    if (node.type === 'link' || node.type === 'blocklink') {
+    if (node.type === 'link') {
       return renderFunction(
         node,
         children,
         parentNodes,
         this._style,
         this._onLinkPress,
-      );
-    }
-
-    if (node.type === 'image') {
-      return renderFunction(
-        node,
-        children,
-        parentNodes,
-        this._style,
-        this._allowedImageHandlers,
-        this._defaultImageHandler,
       );
     }
 

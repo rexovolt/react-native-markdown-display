@@ -83,8 +83,6 @@ const getRenderer = (
   onLinkPress,
   maxTopLevelChildren,
   topLevelMaxExceededItem,
-  allowedImageHandlers,
-  defaultImageHandler,
   debugPrintTree,
 ) => {
   if (renderer && rules) {
@@ -120,8 +118,6 @@ const getRenderer = (
       onLinkPress,
       maxTopLevelChildren,
       topLevelMaxExceededItem,
-      allowedImageHandlers,
-      defaultImageHandler,
       debugPrintTree,
     );
   }
@@ -141,14 +137,6 @@ const Markdown = React.memo(
     onLinkPress,
     maxTopLevelChildren = null,
     topLevelMaxExceededItem = <Text key="dotdotdot">...</Text>,
-    allowedImageHandlers = [
-      'data:image/png;base64',
-      'data:image/gif;base64',
-      'data:image/jpeg;base64',
-      'https://',
-      'http://',
-    ],
-    defaultImageHandler = 'https://',
     debugPrintTree = false,
   }) => {
     const momoizedRenderer = useMemo(
@@ -162,8 +150,6 @@ const Markdown = React.memo(
           onLinkPress,
           maxTopLevelChildren,
           topLevelMaxExceededItem,
-          allowedImageHandlers,
-          defaultImageHandler,
           debugPrintTree,
         ),
       [
@@ -175,8 +161,6 @@ const Markdown = React.memo(
         style,
         mergeStyle,
         topLevelMaxExceededItem,
-        allowedImageHandlers,
-        defaultImageHandler,
         debugPrintTree,
       ],
     );

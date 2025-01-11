@@ -7,16 +7,9 @@ export function cleanupTokens(tokens) {
   tokens.forEach((token) => {
     token.type = getTokenTypeByToken(token);
 
-    // set image and hardbreak to block elements
-    if (token.type === 'image' || token.type === 'hardbreak') {
+    // set hardbreak to block elements
+    if (token.type === 'hardbreak') {
       token.block = true;
-    }
-
-    // Set img alt text
-    if (token.type === 'image') {
-      token.attrs[token.attrIndex('alt')][1] = renderInlineAsText(
-        token.children,
-      );
     }
   });
 

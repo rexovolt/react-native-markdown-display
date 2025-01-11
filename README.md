@@ -191,8 +191,6 @@ And some additional, less used options:
 | `markdownit` | `instanceOf(MarkdownIt)` | `false` | A custom markdownit instance with your configuration, default is `MarkdownIt({typographer: true})`
 | `maxTopLevelChildren` | `null` | `false` | If defined as a number will only render out first `n` many top level children, then will try to render out `topLevelMaxExceededItem`
 | `topLevelMaxExceededItem` | `<Text key="dotdotdot">...</Text>` | `false` | Will render when `maxTopLevelChildren` is hit. Make sure to give it a key!
-| `allowedImageHandlers` | `['data:image/png;base64', 'data:image/gif;base64', 'data:image/jpeg;base64', 'https://', 'http://']` | `false` | Any image that does not start with one of these will have the `defaultImageHandler` value prepended to it (unless `defaultImageHandler` is null in which case it won't try to render anything)
-| `defaultImageHandler` | `http://` | `false` | Will be prepended to an image url if it does not start with something in the `allowedImageHandlers` array, if this is set to null, it won't try to recover but will just not render anything instead.
 
 
 # Syntax Support
@@ -992,8 +990,6 @@ export default App;
 | `tr` | `tr` | 
 | `td` | `td` | 
 | `link` | `link` | 
-| `blocklink` | `blocklink` | 
-| `image` | `image` | 
 | `text` | `text` | 
 | `textgroup` | `textgroup` | 
 | `paragraph` | `paragraph` | 
@@ -1060,7 +1056,7 @@ export default App;
 <details><summary>Using a Custom Rule</summary>
 <p>
 
-You will need to overwrite one or both of `link` and `blocklink`, the original defenitions can be [found here](https://github.com/iamacup/react-native-markdown-display/blob/master/src/lib/renderRules.js)
+You will need to overwrite `link`. The original defenitions can be [found here](https://github.com/iamacup/react-native-markdown-display/blob/master/src/lib/renderRules.js)
 
 Something like this with `yourCustomHandlerFunctionOrLogicHere`:
 
@@ -1111,7 +1107,7 @@ export default App;
 
 # Disabling Specific Types of Markdown
 
-You can dissable any type of markdown you want, which is very useful in a mobile environment, by passing the markdownit property like below. Note that for convenience we also export the `MarkdownIt` instance so you don't have to include it as a project dependency directly just to remove some types of markdown.
+You can disable any type of markdown you want, which is very useful in a mobile environment, by passing the markdownit property like below. Note that for convenience we also export the `MarkdownIt` instance so you don't have to include it as a project dependency directly just to remove some types of markdown.
 
 This example will stop images and links.
 

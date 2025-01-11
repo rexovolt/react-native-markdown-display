@@ -156,16 +156,6 @@ export const styles = {
   link: {
     textDecorationLine: 'underline',
   },
-  blocklink: {
-    flex: 1,
-    borderColor: '#000000',
-    borderBottomWidth: 1,
-  },
-
-  // Images
-  image: {
-    flex: 1,
-  },
 
   // Text Output
   text: {},

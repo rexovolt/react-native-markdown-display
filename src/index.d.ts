@@ -28,21 +28,10 @@ export type RenderLinkFunction = (
   onLinkPress?: (url: string) => boolean,
 ) => ReactNode;
 
-export type RenderImageFunction = (
-  node: ASTNode,
-  children: ReactNode[],
-  parentNodes: ASTNode[],
-  styles: any,
-  allowedImageHandlers: string[],
-  defaultImageHandler: string,
-) => ReactNode;
-
 export interface RenderRules {
   [name: string]: RenderFunction | undefined;
 
   link?: RenderLinkFunction;
-  blocklink?: RenderLinkFunction;
-  image?: RenderImageFunction;
 }
 
 export const renderRules: RenderRules;

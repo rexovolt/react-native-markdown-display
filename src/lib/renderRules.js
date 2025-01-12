@@ -7,7 +7,8 @@ import hasParents from './util/hasParents';
 import textStyleProps from './data/textStyleProps';
 
 const renderRules = (Text) => ({
-  // when unknown elements are introduced, so it wont break
+  // this is called when unknown elements are introduced, so it won't break
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   unknown: (node, children, parent, styles) => null,
 
   // The main container

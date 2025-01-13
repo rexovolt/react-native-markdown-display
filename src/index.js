@@ -14,7 +14,6 @@ import renderRules from './lib/renderRules';
 import AstRenderer from './lib/AstRenderer';
 import MarkdownIt from 'markdown-it';
 import removeTextStyleProps from './lib/util/removeTextStyleProps';
-import {styles} from './lib/styles';
 import {stringToTokens} from './lib/util/stringToTokens';
 import textStyleProps from './lib/data/textStyleProps';
 
@@ -28,35 +27,14 @@ export {
   stringToTokens,
   tokensToAST,
   MarkdownIt,
-  styles,
   removeTextStyleProps,
   textStyleProps,
 };
 
 // we use StyleSheet.flatten here to make sure we have an object, in case someone
 // passes in a StyleSheet.create result to the style prop
-const getStyle = (mergeStyle, style) => {
+const getStyle = (style) => {
   let useStyles = {};
-
-  if (mergeStyle === true && style !== null) {
-    // make sure we get anything user defuned
-    Object.keys(style).forEach((value) => {
-      useStyles[value] = {
-        ...StyleSheet.flatten(style[value]),
-      };
-    });
-
-    // combine any existing styles
-    Object.keys(styles).forEach((value) => {
-      useStyles[value] = {
-        ...styles[value],
-        ...StyleSheet.flatten(style[value]),
-      };
-    });
-  } else {
-    useStyles = {
-      ...styles,
-    };
 
     if (style !== null) {
       Object.keys(style).forEach((value) => {
@@ -65,7 +43,6 @@ const getStyle = (mergeStyle, style) => {
         };
       });
     }
-  }
 
   Object.keys(useStyles).forEach((value) => {
     useStyles['_VIEW_SAFE_' + value] = removeTextStyleProps(useStyles[value]);
@@ -79,7 +56,6 @@ const getRenderer = (
   renderer,
   rules,
   style,
-  mergeStyle,
   onLinkPress,
   maxTopLevelChildren,
   topLevelMaxExceededItem,
@@ -107,7 +83,7 @@ const getRenderer = (
       );
     }
   } else {
-    const useStyles = getStyle(mergeStyle, style);
+    const useStyles = getStyle(style);
 
     return new AstRenderer(
       {
@@ -130,7 +106,6 @@ const Markdown = React.memo(
     renderer = null,
     rules = null,
     style = null,
-    mergeStyle = true,
     markdownit = MarkdownIt({
       typographer: false,
     }),
@@ -146,7 +121,6 @@ const Markdown = React.memo(
           renderer,
           rules,
           style,
-          mergeStyle,
           onLinkPress,
           maxTopLevelChildren,
           topLevelMaxExceededItem,
@@ -159,7 +133,6 @@ const Markdown = React.memo(
         renderer,
         rules,
         style,
-        mergeStyle,
         topLevelMaxExceededItem,
         debugPrintTree,
       ],

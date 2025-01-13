@@ -82,7 +82,6 @@ export interface MarkdownProps {
   style?: StyleSheet.NamedStyles<any>;
   renderer?: AstRenderer;
   markdownit?: MarkdownIt;
-  mergeStyle?: boolean;
   debugPrintTree?: boolean;
   onLinkPress?: (url: string) => boolean;
   children: string;

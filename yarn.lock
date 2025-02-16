@@ -1883,19 +1883,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rexovolt/markdown-it@npm:^14.2.0":
-  version: 14.2.0
-  resolution: "@rexovolt/markdown-it@npm:14.2.0"
+"@rexovolt/markdown-it@npm:^14.2.1":
+  version: 14.2.1
+  resolution: "@rexovolt/markdown-it@npm:14.2.1"
   dependencies:
     argparse: "npm:^2.0.1"
-    entities: "npm:^4.4.0"
+    entities: "npm:^6.0.0"
     linkify-it: "npm:^5.0.0"
     mdurl: "npm:^2.0.0"
     punycode.js: "npm:^2.3.1"
     uc.micro: "npm:^2.1.0"
   bin:
     markdown-it: bin/markdown-it.mjs
-  checksum: 10c0/64a10ef21de63757d37e361ea3f513247cb9528a802ee771f62f3d6e7c439e3e1bf92d98a4148481e621d1a58d401e4fa5039774e730f68325b89b0b695a263f
+  checksum: 10c0/795830a65e6950b066f5bf2fb60b08004086e074ca502be7115a700a2bb7c62ed5f652d7c0b3ea274b550e449814e10fae394edcfc89b508d1093f1d9c5b5630
   languageName: node
   linkType: hard
 
@@ -1909,7 +1909,7 @@ __metadata:
     "@react-native/eslint-config": "npm:^0.76.3"
     "@react-native/metro-config": "npm:^0.76.3"
     "@react-native/typescript-config": "npm:^0.76.3"
-    "@rexovolt/markdown-it": "npm:^14.2.0"
+    "@rexovolt/markdown-it": "npm:^14.2.1"
     "@types/markdown-it": "npm:^14.1.2"
     "@typescript-eslint/eslint-plugin": "npm:^8.16.0"
     "@typescript-eslint/parser": "npm:^8.16.0"
@@ -3539,10 +3539,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"entities@npm:^4.4.0":
-  version: 4.5.0
-  resolution: "entities@npm:4.5.0"
-  checksum: 10c0/5b039739f7621f5d1ad996715e53d964035f75ad3b9a4d38c6b3804bb226e282ffeae2443624d8fdd9c47d8e926ae9ac009c54671243f0c3294c26af7cc85250
+"entities@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "entities@npm:6.0.0"
+  checksum: 10c0/b82a7bd5de282860f3c36a91e815e41e874fd036c83956a568b82729678492eb088359d6f7e0a4f5c00776427263fcba04959b8340fefa430c39b9bce770427e
   languageName: node
   linkType: hard
 

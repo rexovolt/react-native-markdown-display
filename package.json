@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/rexovolt/react-native-markdown-display",
   "dependencies": {
-    "@rexovolt/markdown-it": "^14.2.0",
+    "@rexovolt/markdown-it": "^14.2.1",
     "css-to-react-native": "^3.2.0"
   },
   "peerDependencies": {

@@ -12,7 +12,7 @@ import openUrl from './lib/util/openUrl';
 import tokensToAST from './lib/util/tokensToAST';
 import renderRules from './lib/renderRules';
 import AstRenderer from './lib/AstRenderer';
-import MarkdownIt from 'markdown-it';
+import MarkdownIt from '@rexovolt/markdown-it';
 import removeTextStyleProps from './lib/util/removeTextStyleProps';
 import {stringToTokens} from './lib/util/stringToTokens';
 import textStyleProps from './lib/data/textStyleProps';

@@ -1883,6 +1883,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rexovolt/markdown-it@npm:^14.2.0":
+  version: 14.2.0
+  resolution: "@rexovolt/markdown-it@npm:14.2.0"
+  dependencies:
+    argparse: "npm:^2.0.1"
+    entities: "npm:^4.4.0"
+    linkify-it: "npm:^5.0.0"
+    mdurl: "npm:^2.0.0"
+    punycode.js: "npm:^2.3.1"
+    uc.micro: "npm:^2.1.0"
+  bin:
+    markdown-it: bin/markdown-it.mjs
+  checksum: 10c0/64a10ef21de63757d37e361ea3f513247cb9528a802ee771f62f3d6e7c439e3e1bf92d98a4148481e621d1a58d401e4fa5039774e730f68325b89b0b695a263f
+  languageName: node
+  linkType: hard
+
 "@rexovolt/react-native-markdown-display@workspace:.":
   version: 0.0.0-use.local
   resolution: "@rexovolt/react-native-markdown-display@workspace:."
@@ -1893,6 +1909,7 @@ __metadata:
     "@react-native/eslint-config": "npm:^0.76.3"
     "@react-native/metro-config": "npm:^0.76.3"
     "@react-native/typescript-config": "npm:^0.76.3"
+    "@rexovolt/markdown-it": "npm:^14.2.0"
     "@types/markdown-it": "npm:^14.1.2"
     "@typescript-eslint/eslint-plugin": "npm:^8.16.0"
     "@typescript-eslint/parser": "npm:^8.16.0"
@@ -1905,7 +1922,6 @@ __metadata:
     eslint-plugin-react: "npm:^7.37.2"
     eslint-plugin-react-hooks: "npm:^5.0.0"
     jest: "npm:^29.7.0"
-    markdown-it: "patch:markdown-it@npm%3A14.1.0#~/.yarn/patches/markdown-it-npm-14.1.0-e337d75bfe.patch"
     prettier: "npm:^2.8.8"
     react: "npm:^18.3.1"
     react-native: "npm:^0.76.6"
@@ -6046,38 +6062,6 @@ __metadata:
   dependencies:
     tmpl: "npm:1.0.5"
   checksum: 10c0/b0e6e599780ce6bab49cc413eba822f7d1f0dfebd1c103eaa3785c59e43e22c59018323cf9e1708f0ef5329e94a745d163fcbb6bff8e4c6742f9be9e86f3500c
-  languageName: node
-  linkType: hard
-
-"markdown-it@npm:14.1.0":
-  version: 14.1.0
-  resolution: "markdown-it@npm:14.1.0"
-  dependencies:
-    argparse: "npm:^2.0.1"
-    entities: "npm:^4.4.0"
-    linkify-it: "npm:^5.0.0"
-    mdurl: "npm:^2.0.0"
-    punycode.js: "npm:^2.3.1"
-    uc.micro: "npm:^2.1.0"
-  bin:
-    markdown-it: bin/markdown-it.mjs
-  checksum: 10c0/9a6bb444181d2db7016a4173ae56a95a62c84d4cbfb6916a399b11d3e6581bf1cc2e4e1d07a2f022ae72c25f56db90fbe1e529fca16fbf9541659dc53480d4b4
-  languageName: node
-  linkType: hard
-
-"markdown-it@patch:markdown-it@npm%3A14.1.0#~/.yarn/patches/markdown-it-npm-14.1.0-e337d75bfe.patch":
-  version: 14.1.0
-  resolution: "markdown-it@patch:markdown-it@npm%3A14.1.0#~/.yarn/patches/markdown-it-npm-14.1.0-e337d75bfe.patch::version=14.1.0&hash=0fef60"
-  dependencies:
-    argparse: "npm:^2.0.1"
-    entities: "npm:^4.4.0"
-    linkify-it: "npm:^5.0.0"
-    mdurl: "npm:^2.0.0"
-    punycode.js: "npm:^2.3.1"
-    uc.micro: "npm:^2.1.0"
-  bin:
-    markdown-it: bin/markdown-it.mjs
-  checksum: 10c0/9fdde97d1b6c9be47914eb00bde35158e3f1c3ffa9cfb54f9047c3625991bcf54db467e3f0aa96c625f2dde46f088f9cacb6ca4f69d7ecca02a8457a1c08c207
   languageName: node
   linkType: hard
 

@@ -1929,6 +1929,7 @@ __metadata:
   peerDependencies:
     react: ">=16.2.0"
     react-native: ">=0.50.4"
+    react-native-unistyles: "*"
   languageName: unknown
   linkType: soft
 

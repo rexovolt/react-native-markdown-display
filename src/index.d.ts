@@ -2,7 +2,8 @@
 import MarkdownIt from 'markdown-it';
 import Token from 'markdown-it/lib/token';
 import {ComponentType, ReactNode} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
+import {StyleSheet} from 'react-native-unistyles';
 
 export function getUniqueID(): string;
 

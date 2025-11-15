@@ -2,7 +2,7 @@
 
 It is a React Native markdown renderer done right. This is __not__ a web-view markdown renderer but a renderer that uses native components for all its elements. These components can be overwritten and styled as needed.
 
-NOTE: this fork is for use by [RVMob](https://github.com/revoltchat/rvmob) and is more focused on Revolt/Upryzing's version of markdown than on CommonMark - **incompatibilities are certain!**
+NOTE: this fork is for use by [Clerotri](https://github.com/upryzing/clerotri) and is more focused on Revolt/Upryzing's version of markdown than on CommonMark - **incompatibilities are certain!** It also requires [Unistyles](https://unistyl.es).
 
 ### Install
 
@@ -57,7 +57,8 @@ This next example worked with `"react-native-markdown-display": "^7.0.0-alpha.2"
 
 ```jsx
 import React from "react";
-import { StyleSheet, SafeAreaView, ScrollView, StatusBar } from "react-native";
+import { SafeAreaView, ScrollView, StatusBar } from "react-native";
+import { StyleSheet } from 'react-native-unistyles';
 import { useTheme } from "@react-navigation/native";
 
 import Markdown from "react-native-markdown-display";
@@ -106,12 +107,12 @@ With text input
 ```jsx
 import React from "react";
 import {
-  StyleSheet,
   SafeAreaView,
   ScrollView,
   StatusBar,
   TextInput,
 } from "react-native";
+import { StyleSheet } from 'react-native-unistyles';
 import { useTheme } from "@react-navigation/native";
 
 import Markdown from "react-native-markdown-display";
@@ -826,7 +827,8 @@ Styles are used to determine how certain rules are styled. **By default, all com
 
 ```jsx
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar, StyleSheet } from 'react-native';
+import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
+import { StyleSheet } from 'react-native-unistyles';
 
 import Markdown from '@rexovolt/react-native-markdown-display';
 

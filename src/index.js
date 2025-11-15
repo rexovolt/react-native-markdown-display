@@ -4,7 +4,8 @@
  */
 
 import React, {useMemo} from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {Text} from 'react-native';
+import {StyleSheet} from 'react-native-unistyles';
 import parser from './lib/parser';
 import getUniqueID from './lib/util/getUniqueID';
 import hasParents from './lib/util/hasParents';
@@ -36,13 +37,13 @@ export {
 const getStyle = (style) => {
   let useStyles = {};
 
-    if (style !== null) {
-      Object.keys(style).forEach((value) => {
-        useStyles[value] = {
-          ...StyleSheet.flatten(style[value]),
-        };
-      });
-    }
+  if (style !== null) {
+    Object.keys(style).forEach((value) => {
+      useStyles[value] = {
+        ...StyleSheet.flatten(style[value]),
+      };
+    });
+  }
 
   Object.keys(useStyles).forEach((value) => {
     useStyles['_VIEW_SAFE_' + value] = removeTextStyleProps(useStyles[value]);

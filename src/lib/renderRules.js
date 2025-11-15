@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Platform, StyleSheet} from 'react-native';
+import {View, Platform} from 'react-native';
+import {StyleSheet} from 'react-native-unistyles';
 
 import openUrl from './util/openUrl';
 import hasParents from './util/hasParents';
